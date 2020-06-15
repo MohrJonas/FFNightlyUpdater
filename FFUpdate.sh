@@ -1,14 +1,9 @@
 #!/bin/bash
 
 clear
-set -e
 
 print_step_begin() {
 	echo -e "\e[32m\e[1m==> $1\e[0m"
-}
-
-print_step_done() {
-	echo -e "\e[94m\e[1m==> Finished $1\e[0m"
 }
 
 check_deps() {
@@ -39,22 +34,17 @@ rm_old() {
 
 print_step_begin "Checking dependencies"
 check_deps
-print_step_done "Checcking dependencies"
 
 print_step_begin "Downloading lastest release"
 dl_latest
-print_step_done "Downloading latest release"
 
 print_step_begin "Extracting release"
 ext_latest
-print_step_done "Extracting release"
 
 print_step_begin "Removing old version"
 rm_old
-print_step_done "Removing old version"
 
 print_step_begin "Copying new version"
 sudo cp -rf /tmp/firefox /opt
-print_step_done "Copying new version"
 
 print_step_begin "Done!"
