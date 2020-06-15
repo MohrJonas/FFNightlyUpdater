@@ -9,6 +9,6 @@ Clone this repo:
 Run the scipt:  
 `cd FFNightlyUpdater`  
 `./FFUpdate.sh`  
-Install the desktop file:
+Install the desktop file:  
 `cp ffnightly.desktop ~/.local/share/application`
 
